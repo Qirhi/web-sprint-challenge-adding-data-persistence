@@ -1,11 +1,8 @@
 const router = require('express').Router();
 const db = require('../../data/dbConfig.js');
-// const { 
-//     checkCarId,
-//     checkCarPayload,
-//     checkVinNumberValid,
-//     checkVinNumberUnique    
-// } = require('./project-middleware.js')
+const { 
+    checkProjectPayload
+} = require('./project-middleware.js')
 const Project = require('./model.js');
 
 router.get('/', async (req, res, next) => {
@@ -20,7 +17,7 @@ router.get('/', async (req, res, next) => {
       }
 }); // returns an array of project objects
 
-router.post('/', async (req, res, next) => {
+router.post('/',   async (req, res, next) => {
     // const projectData = req.resource;
     const projectData = req.body;
 
@@ -38,6 +35,7 @@ router.post('/', async (req, res, next) => {
 module.exports = router;
 
 /*
+
 - [ ] `[POST] /api/projects`
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}`
@@ -45,8 +43,5 @@ module.exports = router;
 - [ ] `[GET] /api/projects`
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `[{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}]`
-
-Boolean(Number("0")); // false
-Boolean(Number("1")); // true
 
 */

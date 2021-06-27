@@ -28,10 +28,10 @@ In this project you will be given a set of requirements and must design a databa
 
 [x] 1. `index.js`
 [x] 2. `api/server.js`
-[] 3. `model.js` inside `api/project`, `api/resource` and `api/task`
-[] 4. `router.js` inside `api/project`, `api/resource` and `api/task`
+[x] 3. `model.js` inside `api/project`, `api/resource` and `api/task`
+[x] 4. `router.js` inside `api/project`, `api/resource` and `api/task`
 [x] 5. migration file(s)
-[] 6. seed file(s) **optional**
+[x] 6. seed file(s) **optional**
 
 ### Required Dependencies
 
@@ -72,30 +72,30 @@ Build the migration(s) in Knex inside the `data/migrations` folder using appropr
 
 Build an API inside the `api` folder with endpoints for:
 
-- [ ] `[POST] /api/resources`
+- [x] `[POST] /api/resources`
 
   - Example of response body: `{"resource_id":1,"resource_name":"foo","resource_description":null}`
 
-- [ ] `[GET] /api/resources`
+- [x] `[GET] /api/resources`
 
   - Example of response body: `[{"resource_id":1,"resource_name":"foo","resource_description":null}]`
 
-- [ ] `[POST] /api/projects`
+- [x] `[POST] /api/projects`
 
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}`
 
-- [ ] `[GET] /api/projects`
+- [x] `[GET] /api/projects`
 
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `[{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}]`
 
-- [ ] `[POST] /api/tasks`
+- [x] `[POST] /api/tasks`
 
   - Even though `task_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"task_id":1,"task_description":"baz","task_notes":null,"task_completed":false,"project_id:1}`
 
-- [ ] `[GET] /api/tasks`
+- [x] `[GET] /api/tasks`
   - Even though `task_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Each task must include `project_name` and `project_description`
   - Example of response body: `[{"task_id":1,"task_description":"baz","task_notes":null,"task_completed":false,"project_name:"bar","project_description":null}]`
@@ -111,12 +111,12 @@ Build an API inside the `api` folder with endpoints for:
 
 ## Submission format
 
-- [ ] Submit via Codegrade by committing and pushing any new changes.
-- [ ] Create a pull request to merge `<firstName-lastName>` branch into `main`.
-- [ ] Please don't merge your own pull request and make sure **you are on your own repo**.
-- [ ] Check Codegrade for automated feedback.
-- [ ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback.
-- [ ] Any changes pushed after the deadline will not receive any feedback.
+- [x] Submit via Codegrade by committing and pushing any new changes.
+- [x] Create a pull request to merge `<firstName-lastName>` branch into `main`.
+- [x] Please don't merge your own pull request and make sure **you are on your own repo**.
+- [x] Check Codegrade for automated feedback.
+- [x] Check Codegrade on the days following the Sprint Challenge for reviewer feedback.
+- [x] Any changes pushed after the deadline will not receive any feedback.
 
 ## Interview Questions
 

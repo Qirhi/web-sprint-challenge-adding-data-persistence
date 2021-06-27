@@ -4,6 +4,7 @@ const db = require('../../data/dbConfig.js');
 //     checkVinNumberUnique    
 // } = require('./tasks-middleware.js')
 const Task = require('./model.js');
+const { checkTaskPayload } = require('./task-middleware.js');
 
 router.get('/', async (req, res, next) => {
     console.log("in the router get")
@@ -17,7 +18,7 @@ router.get('/', async (req, res, next) => {
       }
 });
 
-router.post('/', async (req, res, next) => {
+router.post('/', checkTaskPayload, async (req, res, next) => {
   // const projectData = req.resource;
   const taskData = req.body;
 
